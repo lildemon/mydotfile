@@ -6,4 +6,4 @@
 # to make sure you're on the latest and greatest.
 
 # update nodebin packages
-npm update $$DOTFILEDIR/nodebin
+npm update $DOTFILESDIR/nodebin
