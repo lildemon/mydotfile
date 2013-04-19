@@ -1,0 +1,11 @@
+{
+	"name": "nodebin",
+	"version": "0.0.1",
+	"description": "My Node Bin Utility Collection",
+	"devDependencies": {
+		"coffee-script": "*",
+		"grunt-cli": "",
+		"uglify-js": ">=1.0.0",
+		"node-clipboard": "git://github.com/lildemon/node-clipboard.git"
+	}
+}

@@ -1,0 +1,1 @@
+export PATH="$DOTFILESDIR/nodebin/node_modules/.bin:$PATH" # I need to setup $DOTFILE variable first

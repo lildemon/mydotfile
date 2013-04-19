@@ -1,0 +1,7 @@
+#!/bin/sh
+if [ "$(uname -s)" == "Darwin" ]
+then
+  /Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl
+else
+  subl
+fi

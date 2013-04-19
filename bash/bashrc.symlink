@@ -1,0 +1,35 @@
+export DOTFILESDIR=$HOME/.dotfiles
+export PROJECTS=~/Projects
+
+function source_files() {
+	for file in $@; do
+		echo "source file $file"
+		source $file
+	done
+}
+
+# Source global definitions (CentOS way)
+# 记： if 是bash判断后面的命令运行之后bash设定的返回值变量 $?， if..then..elif..else..fi 一起使用
+# $ type [
+# [ is a shell builtin  <-- [当作一个命令处理， 所以 这里跟上一些命令再跟上 && 加命令bash会以为 前面的命令是 [... 缺少了 ] 号
+#$ type [[
+#[[ is a shell keyword  <-- 因为[[是关键词，所以[[]]内部使用 && 什么的却是合法的
+if [ -f /etc/bashrc ]; then
+	source /etc/bashrc
+fi
+
+# use .localrc for SUPER SECRET CRAP that you don't
+# want in your public, versioned repo.
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
+
+# find & load path files
+load_files=$(find $DOTFILESDIR -maxdepth 2 -name 'path.bash')
+source_files $load_files
+
+# find & load other files
+load_files=$(find $DOTFILESDIR -maxdepth 2 -name '*.bash' ! -name 'path.bash')
+source_files $load_files
