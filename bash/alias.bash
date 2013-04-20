@@ -11,6 +11,7 @@ alias .....="cd ../../../.."
 
 # Edit aliase
 alias ea="subl $DOTFILESDIR/bash/alias.bash"
+alias ddir="cd $DOTFILESDIR"
 
 ## Use only one vim..http://vimeo.com/4446112
 alias g='mvim --remote-silent'
