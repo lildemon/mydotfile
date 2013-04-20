@@ -21,9 +21,9 @@ fi
 # [ is a shell builtin  <-- [当作一个命令处理， 所以 这里跟上一些命令再跟上 && 加命令bash会以为 前面的命令是 [... 缺少了 ] 号
 #$ type [[
 #[[ is a shell keyword  <-- 因为[[是关键词，所以[[]]内部使用 && 什么的却是合法的
-#if [ -f /etc/bashrc ]; then
-#	source /etc/bashrc
-#fi
+if [ -f /etc/bashrc ] &&  [[ "$(uname -s)" == Linux ]]; then
+	source /etc/bashrc
+fi
 
 # use .localrc for SUPER SECRET CRAP that you don't
 # want in your public, versioned repo.
