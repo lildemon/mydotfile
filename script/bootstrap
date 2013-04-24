@@ -39,6 +39,12 @@ setup_gitconfig () {
     sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" git/gitconfig.symlink.example > git/gitconfig.symlink
 
     success 'gitconfig'
+    if [[ "$(uname -s)" == MINGW32* ]]; then
+      git config --global gui.encoding utf-8
+      git config --global i18n.commitencoding utf-8
+      git config --global i18n.logoutputencoding gbk
+      git config --global core.quotepath false
+    fi
   fi
 }
 
