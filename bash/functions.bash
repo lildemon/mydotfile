@@ -54,7 +54,7 @@ function frontkit() {
     # of the stack.
     #
     function stack_cd {
-        if [ $1 ]; then
+        if [ "$1" ]; then
             # use the pushd bash command to push the directory
             # to the top of the stack, and enter that directory
             pushd "$1" > /dev/null
