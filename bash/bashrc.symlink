@@ -37,6 +37,9 @@ fi
 load_files=$(find $DOTFILESDIR -maxdepth 2 -name 'path.bash')
 source_files $load_files
 
+load_files=$(find $DOTFILESDIR -maxdepth 2 -name 'functions.bash')
+source_files $load_files
+
 # find & load other files
-load_files=$(find $DOTFILESDIR -maxdepth 2 -name '*.bash' ! -name 'path.bash')
+load_files=$(find $DOTFILESDIR -maxdepth 2 -name '*.bash' ! -name 'path.bash' ! -name 'functions.bash')
 source_files $load_files

@@ -19,7 +19,7 @@ alias g='mvim --remote-silent'
 if [[ "$(uname -s)" == MINGW32* ]]; then
 	alias open=start
 	alias chrome="open chrome"
-	alias ls='ls -F --color --show-control-chars'
+	alias ls='ls -F --show-control-chars'
 elif [[ "$(uname -s)" == Darwin ]]; then
 	alias chrome='open -a "Google Chrome"'
 fi

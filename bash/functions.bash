@@ -27,7 +27,7 @@ function src() {
 function google() {
 	local key=${@// /%20}
 	if [[ "$(uname -s)" == MINGW32* ]]; then
-		open chrome "http://www.google.com/search?newwindow=1&output=search&sclient=psy-ab&q=$key&btnK="
+		start chrome "http://www.google.com/search?newwindow=1&output=search&sclient=psy-ab&q=$key&btnK="
 	elif [[ "$(uname -s)" == Darwin ]]; then
 		open "http://www.google.com/search?newwindow=1&output=search&sclient=psy-ab&q=$key&btnK="
 	fi
