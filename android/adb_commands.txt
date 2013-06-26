@@ -1,0 +1,9 @@
+http://developer.android.com/tools/help/adb.html
+adb -e: run following command in the only emulator
+adb -d: .........................the only actual device
+adb logcat/lolcat: read android logs
+adb emu: send emulator window message
+adb shell: run shell or execute follow command
+adb root: grant root access
+adb install/uninstall: send apk to device and run /usr/sbin?/pm to install or uninstall
+adb forward tcp:1234 tcp:1234: need to review that later
