@@ -1,0 +1,2 @@
+filter out unwanted message:
+	^(Unexpected value from nativeGetEnabledTags.*)
