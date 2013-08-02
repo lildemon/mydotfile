@@ -14,6 +14,8 @@
         wtf     = !$ZSH/bin/git-wtf
         rank-contributers = !$ZSH/bin/git-rank-contributers
         count   = !git shortlog -sn
+	whatadded = log --diff-filter=A
+        diffadded = !sh -c 'git difftool -w $(git rev-list HEAD --reverse -- "$0" | head -1)..HEAD -- "$0"'
 [color]
         diff = auto
         status = auto
@@ -21,7 +23,8 @@
         ui = true
 [core]
         excludesfile = ~/.gitignore
-        editor = vim
+        editor = subl
+	quotepath = false
 [apply]
         whitespace = nowarn
 [mergetool]
@@ -36,3 +39,9 @@
         #
         # Setting to git 2.0 default to surpress warning message
         # default = simple
+[i18n]
+	commitencoding = utf-8
+[diff]
+        tool = bc3
+[difftool "bc3"]
+        path = "C:\\Program Files (x86)\\Beyond Compare 3\\BComp.exe"
