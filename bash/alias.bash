@@ -30,3 +30,4 @@ alias suble="subl $DOTFILESDIR"
 
 alias vps="ssh ronhng@vps.frontkit.net -p 2843"
 alias kissy="chrome https://github.com/kissyteam/kissy"
+alias pq="pngquant --ext pq.png --iebug 256 --force"
