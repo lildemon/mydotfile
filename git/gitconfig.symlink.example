@@ -19,14 +19,16 @@
         status = auto
         branch = auto
         ui = true
-		quotepath = false
 [core]
         excludesfile = ~/.gitignore
         editor = vim
+        quotepath = false
 [apply]
         whitespace = nowarn
 [mergetool]
         keepBackup = false
+[diff]
+        tool = bc3
 [difftool]
         prompt = false
 [help]
@@ -39,3 +41,7 @@
         default = simple
 [gui]
 	encoding = utf-8
+[difftool "bc3"]
+        path = "C:\\Program Files (x86)\\Beyond Compare 3\\BComp.exe"
+[i18n]
+        commitencoding = utf-8
