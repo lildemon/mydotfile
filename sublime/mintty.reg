@@ -1,0 +1,10 @@
+Windows Registry Editor Version 5.00
+
+; This will make it appear when you right click ON a folder
+; The "Icon" line can be removed if you don't want the icon to appear
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\mintty]
+@="Open Mintty"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\mintty\command]
+@="\"C:\\Program Files (x86)\\Git\\bin\\mintty.exe\" -e 'C:\\Program Files (x86)\\Git\\bin\\sh' --login -i"
