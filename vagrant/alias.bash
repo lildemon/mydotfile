@@ -1,0 +1,1 @@
+alias vssh="ssh -i ~/.vagrant.d/insecure_private_key -p 2222 vagrant@localhost"

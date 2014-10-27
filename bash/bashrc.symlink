@@ -1,3 +1,6 @@
+# http://www.guyusoftware.com/2012-11-02-2726.html
+# Non interactive shell
+[ -z "$PS1" ] && return
 export DOTFILESDIR=$HOME/.dotfiles
 export PROJECTS=~/Projects
 
